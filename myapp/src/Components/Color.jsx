@@ -1,18 +1,19 @@
-import React,{useState} from 'react'
-
-function Color({getColor}) {
-const[color, setColor] =useState(''); 
-
+function Color({ getColor }) {
   function ColorFunc(value) {
-    getColor(value)
-    
+    getColor(value);
   }
   return (
     <div>
-      
-      <input type ='text' placeholder ='enter the color ' onChange ={(e)=>{ColorFunc(e.target.value)}}/>
+      <input
+        type="text"
+        placeholder="Enter the color"
+        onChange={(e) => {
+          ColorFunc(e.target.value);
+        }}
+        class="color-input"
+      />
     </div>
-  )
+  );
 }
 
-export default Color
+export default Color;
